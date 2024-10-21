@@ -1,11 +1,11 @@
 import React, { ReactNode } from 'react'
-import { Nanum_Pen_Script } from "next/font/google";
+import { Yeon_Sung } from "next/font/google";
 
-const nanum = Nanum_Pen_Script({ weight: ['400'], preload:false, display: 'swap'});
+const yeonsung = Yeon_Sung({ weight: ['400'], preload:false, display: 'swap'});
 
 const layout = ({ children }: { children: ReactNode }) => {
     return (
-            <div className={nanum.className}>
+            <div className={yeonsung.className}>
                 {children}
             </div>
     )

@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Provider } from "jotai";
 import ReactQueryProviders from "./components/ReactQueryProviders";
+import { Yeon_Sung } from "next/font/google";
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,6 +16,9 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+
+
+const yeonsung = Yeon_Sung({ weight: ['400'], preload:false, display: 'swap'});
 
 export const metadata: Metadata = {
   title: "todoBlock",
@@ -28,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${yeonsung.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ReactQueryProviders>
           <Provider>
